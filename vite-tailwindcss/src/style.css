@@ -2,8 +2,8 @@
 
 @theme {
   --font-sans: "Pretendard Variable", sans-serif;
+}
 
-  /* 텍스트 크기 유틸리티 */
-  --text-*: initial;
-  --text-xl: 64px;
+.msg-button {
+  @apply dark:border-violet-500 p-1 rounded-2xl text-sm text-violet-500 border border-gray-500;
 }
