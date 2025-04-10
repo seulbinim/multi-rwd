@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard Variable", sans-serif;
+
+  /* 텍스트 크기 유틸리티 */
+  --text-*: initial;
+  --text-xl: 64px;
+}

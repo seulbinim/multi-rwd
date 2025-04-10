@@ -1,0 +1,18 @@
+/* srcset 속성 */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+figure {
+  border: 1px solid currentColor;
+  padding: 1em;
+
+  figcaption {
+    text-align: center;
+    margin-top: 1em;
+  }
+}

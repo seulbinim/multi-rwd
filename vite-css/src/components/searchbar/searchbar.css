@@ -1,0 +1,128 @@
+/* 검색 바 컴포넌트 스타일링 */
+/* 로고 컴포넌트 */
+.logo {
+  --size: 1.5rem;
+
+  display: block;
+  width: var(--size);
+  aspect-ratio: 1/1;
+
+  svg {
+    vertical-align: middle;
+  }
+}
+
+/* 입력서식 컴포넌트 */
+.input {
+  input {
+    --size: 1.5rem;
+
+    width: 100%;
+    height: var(--size);
+    border: 1px solid var(--gray-500);
+    padding: 2px 4px 2px 8px;
+    font-size: var(--font-sm);
+  }
+}
+
+/* 버튼 컴포넌트 */
+/* grid 레이아웃 */
+.button-gradient {
+  --size: 1.5rem;
+  --start: #06fd10;
+  --end: #00e1ce;
+  --center: #fff;
+
+  display: grid;
+  border: 0;
+  padding: 0;
+  width: var(--size);
+  aspect-ratio: 1/1;
+  background: var(--start) linear-gradient(135deg, var(--start), var(--end));
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    width: 40%;
+    aspect-ratio: inherit;
+    border-radius: inherit;
+    background: var(--center);
+    place-self: center;
+  }
+}
+
+/* position 레이아웃 */
+/* .button-gradient {
+  --size: 1.5rem;
+  --start: #06fd10;
+  --end: #00e1ce;
+  --center: #fff;
+
+  display: block;
+  position: relative;
+  border: 0;
+  padding: 0;
+  width: var(--size);
+  aspect-ratio: 1/1;
+  background: var(--start) linear-gradient(135deg, var(--start), var(--end));
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    aspect-ratio: inherit;
+    border-radius: inherit;
+    background: var(--center);
+  }
+} */
+
+/* 검색바 컴포넌트 */
+.searchbar {
+  --resize: 1.5rem;
+  --border-color: #06fd10;
+  --spacing-block: var(--spacing-xs);
+  --spacing-inline: var(--spacing-md);
+  --spacing-gap: var(--spacing-xs);
+
+  border: 2px solid var(--border-color);
+  padding: var(--spacing-block) var(--spacing-inline);
+  display: flex;
+  gap: var(--spacing-gap);
+  border-radius: calc(((var(--spacing-block) * 2) + var(--resize)) / 2);
+
+  &:focus-within {
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 /0.5);
+  }
+
+  .logo {
+    flex-shrink: 0;
+    --size: var(--resize);
+  }
+
+  form {
+    display: contents;
+  }
+
+  .input {
+    flex-grow: 1;
+
+    input {
+      --size: var(--resize);
+      border: 0;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  button {
+    --size: var(--resize);
+    margin-left: 4px;
+    flex-shrink: 0;
+  }
+}

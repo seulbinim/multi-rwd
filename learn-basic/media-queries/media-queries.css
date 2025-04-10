@@ -1,0 +1,132 @@
+/* 미디어 쿼리 */
+@import "./../common/reset.css";
+@layer base {
+  ul,
+  ol {
+    margin: 0;
+  }
+  a {
+    color: inherit;
+  }
+}
+
+/* 컨테이너 */
+.container {
+  background: yellow;
+  min-height: 100vh;
+}
+
+/* 헤더 */
+.header {
+  background: #34495e;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+
+  .brand {
+    margin-right: auto;
+  }
+
+  .navigation,
+  .menu,
+  .menu li {
+    display: contents;
+  }
+}
+
+/* 메인 콘텐츠 */
+.main {
+  background: #3498db;
+}
+
+/* 세컨더리 콘텐츠 */
+.secondary {
+  background: #2ecc71;
+}
+
+/* 엑스트라 콘텐츠 */
+.extra {
+  background: #e74c3c;
+}
+
+/* 푸터 */
+.footer {
+  background: #95a5a6;
+}
+
+/* 모바일 디바이스 */
+@media (width <= 640px) {
+  .header {
+    height: 15vh;
+  }
+  .main {
+    height: 40vh;
+  }
+  .secondary {
+    height: 20vh;
+  }
+  .extra {
+    height: 10vh;
+  }
+  .footer {
+    height: 15vh;
+  }
+}
+
+/* 태블릿 디바이스 */
+@media (width >= 640px) and (width <= 1024px) {
+  .header {
+    height: 20vh;
+  }
+
+  /* 플렉스 컨테이너 */
+  .content {
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    .main {
+      width: 70%;
+    }
+
+    .secondary {
+      width: 30%;
+    }
+
+    .extra {
+      width: 100%;
+    }
+  }
+
+  .footer {
+    height: 20vh;
+  }
+}
+
+/* 데스크탑 디바이스 */
+@media (width >=1024px) {
+  .header {
+    height: 15vh;
+  }
+  .content {
+    height: 70vh;
+    display: flex;
+
+    .main {
+      width: 60%;
+    }
+
+    .secondary {
+      width: 20%;
+    }
+
+    .extra {
+      width: 20%;
+      order: -1;
+    }
+  }
+  .header {
+    height: 15vh;
+  }
+}

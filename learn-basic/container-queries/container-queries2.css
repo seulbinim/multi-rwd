@@ -1,0 +1,40 @@
+body {
+  margin: 2em;
+}
+/* 컨테이터 쿼리 */
+.case-01 {
+  container-type: inline-size;
+  container-name: case-01;
+}
+
+.card {
+  border: 1px solid currentColor;
+  padding: 1em;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1em;
+
+  figure {
+    display: contents;
+  }
+}
+
+@container case-01 (min-width: 400px) {
+  .card {
+    flex-flow: row nowrap;
+
+    figure {
+      display: block;
+      width: 35%;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.layout-01 {
+  width: 300px;
+}
+
+.layout-02 {
+  width: 600px;
+}

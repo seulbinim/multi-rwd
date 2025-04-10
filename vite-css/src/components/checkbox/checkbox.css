@@ -1,0 +1,49 @@
+/* 체크박스 컴포넌트 */
+.checkbox {
+  --size: 1.5rem;
+  position: relative;
+
+  [type="checkbox"] {
+    /* accent-color: red; */
+    appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--size);
+    height: var(--size);
+    margin: 0;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  svg {
+    --gray: #999;
+    --green: #03cf5d;
+    --white: #fff;
+
+    width: var(--size);
+    aspect-ratio: 1/1;
+
+    .border,
+    .mark {
+      fill: var(--gray);
+    }
+
+    .area {
+      fill: var(--white);
+    }
+  }
+
+  [type="checkbox"]:checked + label .border,
+  [type="checkbox"]:checked + label .area {
+    fill: var(--green);
+  }
+
+  [type="checkbox"]:checked + label .mark {
+    fill: var(--white);
+  }
+}

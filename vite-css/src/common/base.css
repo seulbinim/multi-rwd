@@ -1,0 +1,27 @@
+@layer base {
+  /* 기본 스타일 */
+  body {
+    font-family: "Pretendard Variable", sans-serif;
+    line-height: 1.15;
+    background-color: light-dark(var(--white), var(--black));
+    color: light-dark(var(--black), var(--white));
+  }
+
+  /* 하이퍼 링크 */
+  a {
+    color: inherit;
+  }
+
+  /* 스크린 리더 환경을 위한 스타일 */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>검색 바 컴포넌트</title>
+    <link rel="icon" href="/vite.svg" />
+    <link rel="preload" as="font" href="/font/woff2/PretendardVariable.woff2" crossorigin="anonymous" />
+    <link rel="stylesheet" as="style" href="/font/pretendardvariable.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <h1>검색 바 컴포넌트</h1>
+
+    <div class="component-wrapper">
+      <div class="searchbar">
+        <!-- 로고 컴포넌트 -->
+        <a href="/" class="logo">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H8L15.5 12V0H24V24H15.1875L8 12.5L8 24H0V0Z" fill="url(#paint0_linear_15_24)" />
+            <defs>
+              <linearGradient id="paint0_linear_15_24" x1="4.5" y1="-1.93715e-07" x2="20.5" y2="24" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1BF008" />
+                <stop offset="1" stop-color="#03CCA8" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </a>
+        <form action="/" method="get">
+          <!-- 입력서식 컴포넌트 -->
+          <div class="input">
+            <label for="input_01" class="sr-only">검색어</label>
+            <input id="input_01" type="search" placeholder="검색어를 입력해주세요." required />
+          </div>
+          <!-- 버튼 컴포넌트 -->
+          <button type="submit" class="button-gradient" aria-label="검색"></button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

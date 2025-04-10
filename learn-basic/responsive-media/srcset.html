@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>srcset 속성</title>
+    <link rel="stylesheet" href="./../common/reset.css" />
+    <link rel="stylesheet" href="./srcset.css" />
+  </head>
+  <body>
+    <figure>
+      <img src="./images/image-src.png" alt="" 
+          srcset="./images/image-1x.png 1x, ./images/image-2x.png 2x, ./images/image-3x.png 3x, ./images/image-4x.png 4x" />
+      <figcaption>반흥형 이미지</figcaption>
+    </figure>
+
+    <figure class="picture">
+      <picture>
+        <source srcset="images/banner-narrow.jpg 375w, images/banner-narrow@2x.jpg 750w"
+                media="(max-width: 768px)" />
+        <source srcset="images/banner-wide.jpg 768w, images/banner-wide@2x.jpg 1536w"
+                media="(min-width: 1000px)" />
+        <img src="images/image-src.png"
+             alt="" />
+      </picture>
+    </figure>
+  </body>
+</html>
